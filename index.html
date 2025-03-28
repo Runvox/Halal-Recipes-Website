@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>HOME</title>
+    <style>
+
+        body {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #f2f2f2;
+        }
+
+        .navbar {
+            background-color: orange;
+            font-size: 18px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px 0;
+            position: relative;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            padding: 8px 15px;
+            font-size:28px;
+        }
+
+        .navbar a:hover {
+            background-color: darkorange;
+            border-radius: 5px;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: orange;
+            min-width: 150px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            text-align: left;
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: darkorange;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdownnewsletter {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdownnewsletter-content {
+            display: none;
+            position: absolute;
+            background-color: orange;
+            min-width: 150px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            text-align: left;
+        }
+
+        .dropdownnewsletter-content a {
+            color: white;
+            padding: 12px 16px;
+            display: block;
+        }
+
+        .dropdownnewsletter-content a:hover {
+            background-color: darkorange;
+        }
+
+        .dropdownnewsletter:hover .dropdownnewsletter-content {
+            display: block;
+        }
+
+        .navbar img {
+            width: 120px;
+            height: auto;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+
+        <a href="index.html"><img src="logo.png" alt="Logo"></a>
+        <a href="ingredients.html">INGREDIENTS</a>
+
+        <div class="dropdown">
+            <a href="meals.html">MEALS ▼</a>
+            <div class="dropdown-content">
+                <a href="breakfast.html">BREAKFAST</a>
+                <a href="lunch.html">LUNCH</a>
+                <a href="dinner.html">DINNER</a>
+            </div>
+        </div>
+
+        <div class="dropdownnewsletter">
+            <a href="newsletter.html">NEWSLETTER ▼</a>
+            <div class="dropdownnewsletter-content">
+                <a href="login.php">LOGIN</a>
+                <a href="register.php">REGISTER</a>
+            </div>
+        </div>
+
+        <a href="about.html">ABOUT US</a>
+
+    </div>
+
+</body>
+</html>
