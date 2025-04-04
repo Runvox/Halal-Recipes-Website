@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="logo.png">
     <title>REGISTER</title>
     <style>
 
@@ -90,7 +91,7 @@
             <input required id="confirm-password" type="password" name="confirm-password" placeholder="REPEAT YOUR PASSWORD.."><br><br>
 
             <div class="error-message" id="passwordError">
-                Your password must contain at least a number, a capital and a special character.
+                Your password must contain at least a number, a capital letter and a special character.
             </div>
             
             <div class="submitregister">
@@ -100,6 +101,7 @@
     </div>
 
     <script>
+
         function validatePassword() {
 
             const password = document.getElementById("password").value;
@@ -107,19 +109,20 @@
 
             const passwordPattern = /^(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*(),.?":{}|<>]).{8,}$/;
 
-            // Validăm parola
             if (!passwordPattern.test(password)) {
                 document.getElementById("passwordError").style.display = "block";
                 return false;
             }
 
             if (password !== confirmPassword) {
-                alert("Parolele nu se potrivesc!");
+                alert("Passwords do not match!");
                 return false;
             }
 
             return true;
         }
+
     </script>
+
 </body>
 </html>

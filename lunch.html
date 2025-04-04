@@ -3,19 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/x-icon" href="logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>LUNCH</title>
     <style>
-
+        /* Font general */
         body {
             margin: 0;
             padding: 0;
             text-align: center;
-            background-color: #f2f2f2;
         }
 
+        /* Navigare */
         .navbar {
             background-color: orange;
             font-size: 18px;
@@ -31,7 +30,9 @@
             color: white;
             font-weight: bold;
             padding: 8px 15px;
-            font-size:28px;
+            font-size: 28px;
+            background-color: orange; /* Fundal portocaliu pentru fiecare link */
+            border-radius: 5px; /* Un pic de colț rotunjit */
         }
 
         .navbar a:hover {
@@ -39,6 +40,7 @@
             border-radius: 5px;
         }
 
+        /* Dropdown pentru MEALS */
         .dropdown {
             position: relative;
             display: inline-block;
@@ -68,6 +70,7 @@
             display: block;
         }
 
+        /* Dropdown pentru NEWSLETTER */
         .dropdownnewsletter {
             position: relative;
             display: inline-block;
@@ -97,17 +100,50 @@
             display: block;
         }
 
+        /* Logo */
         .navbar img {
             width: 120px;
             height: auto;
         }
 
+        /* Container pentru rețete */
+        .recipe-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        /* Stilizare pentru chenarul fiecărui preparat */
+        .recipe-card {
+            border: 2px solid orange;
+            border-radius: 10px;
+            padding: 20px;
+            width: 300px;
+            text-align: left;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .recipe-card h3 {
+            color: darkorange;
+            margin-bottom: 10px;
+        }
+
+        .recipe-card p {
+            color: #333;
+        }
+
+        .recipe-card img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
     </style>
 </head>
 <body>
 
     <div class="navbar">
-
         <a href="index.html"><img src="logo.png" alt="Logo"></a>
         <a href="ingredients.html">INGREDIENTS</a>
 
@@ -129,8 +165,78 @@
         </div>
 
         <a href="about.html">ABOUT US</a>
-
     </div>
+
+    <div class="recipe-container">
+        <div class="recipe-card">
+            <a href="recipe1-details.html">
+                <img src="recipe1.png" alt="recipe1">
+            </a>
+            <h3>Halal Beef Stir Fry</h3>
+            <p>Sizzling hot, perfectly seared beef coated in a glossy, savory-sweet sauce, tossed with crisp, colorful veggies and fragrant garlic-ginger goodness.</p>
+        </div>
+
+        <div class="recipe-card">
+            <a href="recipe2-details.html">
+                <img src="recipe2.png" alt="recipe2">
+            </a>
+            <h3>Halal Spicy Turkish Chickpea Salad</h3>
+            <p>A zesty, spicy mix of tender chickpeas, crisp veggies, and fresh herbs, tossed in a bold chili-sumac dressing with a splash of lemon. Refreshing, fiery, and insanely delicious!</p>
+        </div>
+
+        <div class="recipe-card">
+            <a href="recipe3-details.html">
+                <img src="recipe3.png" alt="recipe3">
+            </a>
+            <h3>Halal Butter Chicken</h3>
+            <p>Tender, juicy chicken simmered in a rich, creamy tomato sauce infused with butter, aromatic spices, and a touch of heat.</p>
+        </div>
+
+        <div class="recipe-card">
+            <a href="recipe4-details.html">
+                <img src="recipe4.png" alt="recipe4">
+            </a>
+            <h3>Halal Plate Of Rice With Beef Curry</h3>
+            <p>Savor a steaming plate of fragrant basmati rice served with tender, slow-cooked beef curry, rich in aromatic spices and velvety sauce.</p>
+        </div>
+
+        <div class="recipe-container">
+            <div class="recipe-card">
+                <a href="recipe5-details.html">
+                    <img src="recipe5.png" alt="recipe5" width="700" height="300">
+                </a>
+                <h3>Halal Korean Friend Chicken Bites</h3>
+                <p>Crispy, juicy, and packed with flavor.</p>
+            </div>
+    
+            <div class="recipe-card">
+                <a href="recipe6-details.html">
+                    <img src="recipe6.png" alt="recipe6">
+                </a>
+                <h3>Halal Chicken Nuggets</h3>
+                <p> Bite-sized, golden, and irresistibly crispy. Our Chicken Nuggets are pure comfort food perfection.</p>
+            </div>
+    
+            <div class="recipe-card">
+                <a href="recipe7-details.html">
+                    <img src="recipe7.png" alt="recipe7">
+                </a>
+                <h3>Halal Chicken Wings Plate</h3>
+                <p>Chicken Wings Plate because one wing is never enough. Crispy on the outside, juicy on the inside, and tossed in your choice of finger-licking sauces—whether it's classic buffalo, honey garlic every bite is ,packed with bold flavor.</p>
+            </div>
+    
+            <div class="recipe-card">
+                <a href="recipe8-details.html">
+                    <img src="recipe8.png" alt="recipe8">
+                </a>
+                <h3>Halal Lamb Over Rice Plate</h3>
+                <p>Tender, juicy, perfectly seasoned lamb, grilled to perfection and served over a bed of fragrant, fluffy rice. Topped with fresh salad, drizzled with our signature white sauce, and a touch of spicy red sauce for that extra kick!</p>
+            </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Halal Recipes. All rights reserved.</p>
+    </footer>
 
 </body>
 </html>

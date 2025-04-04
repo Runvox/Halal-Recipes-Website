@@ -5,19 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>INGREDIENTS</title>
+    <title>RECIPE</title>
     <style>
-
-        * {
+        body {
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-        }
-
-        html, body {
-            height: 100%;
-            display: flex;
-            flex-direction: column;
+            text-align: center;
         }
 
         .navbar {
@@ -27,6 +20,7 @@
             justify-content: space-around;
             align-items: center;
             padding: 10px 0;
+            position: relative;
         }
 
         .navbar a {
@@ -41,6 +35,7 @@
 
         .navbar a:hover {
             background-color: darkorange;
+            border-radius: 5px;
         }
 
         .dropdown, .dropdownnewsletter {
@@ -68,7 +63,7 @@
             background-color: darkorange;
         }
 
-        .dropdown:hover .dropdown-content, 
+        .dropdown:hover .dropdown-content,
         .dropdownnewsletter:hover .dropdownnewsletter-content {
             display: block;
         }
@@ -78,47 +73,62 @@
             height: auto;
         }
 
-        main {
-            max-width: 1200px; 
-            width: 90%; 
-            margin: 20px auto;
-            padding: 30px;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            flex: 1; 
+        .content-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 40px;
+            padding: 40px;
+            flex-wrap: wrap;
         }
 
-        h1 {
+        .video-container {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .video-container iframe {
+            width: 100%;
+            height: 300px;
+            border: none;
+        }
+
+        .recipe-title {
+            flex: 1;
+            text-align: left;
+            min-width: 300px;
+        }
+
+        .recipe-title h1 {
+            font-size: 36px;
             color: orange;
-            margin-bottom: 20px;
-            font-size: 32px;
+            margin-top: 0;
         }
 
-        h2 {
-            color: #ff8c00;
-            margin-bottom: 10px;
-            font-size: 26px;
+        .recipe-box {
+            padding: 30px;
+            background-color: #f9f9f9;
+            text-align: left;
+            max-width: 1000px;
+            margin: 0 auto 40px auto;
+            border-top: 2px solid orange;
         }
 
-        ul {
-            list-style-type: none;
-            padding: 0;
-            font-size: 22px;
+        .recipe-box h2 {
+            color: #333;
         }
 
-        li {
-            padding: 15px;
-            background: #ffebcd;
-            margin: 10px 0;
-            border-radius: 5px;
+        .recipe-box p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #555;
         }
-        
+
         footer {
-            padding: 10px;
-            background: orange;
+            background-color: orange;
             color: white;
             text-align: center;
+            padding: 10px;
         }
     </style>
 </head>
@@ -148,21 +158,22 @@
         <a href="about.html">ABOUT US</a>
     </div>
 
-    <main>
-        <h1><b>Halal Ingredients</b></h1>
+    <div class="content-wrapper">
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/VIDEO_ID" allowfullscreen></iframe>
+        </div>
+        <div class="recipe-title">
+            <h1>Halal Beef Stir Fry</h1>
+        </div>
+    </div>
 
-        <section class="ingredients">
-            <h2>Allowed Ingredients ✅</h2>
-            <ul>
-                <li>Beef (Halal Slaughtered)</li>
-                <li>Lamb (Halal Slaughtered)</li>
-                <li>Chicken (Halal Slaughtered)</li>
-                <li>Fruits and Vegetables</li>
-                <li>Dairy (without non-Halal additives)</li>
-                <li>Fish and Seafood</li>
-            </ul>
-        </section>
-    </main>
+    <div class="recipe-box">
+        <h2>Ingredients:</h2>
+        <p>Ingredients will show here.</p>
+
+        <h2>Instructions:</h2>
+        <p>Instructions will show here.</p>
+    </div>
 
     <footer>
         <p>&copy; 2025 Halal Recipes. All rights reserved.</p>
